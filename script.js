@@ -17,12 +17,16 @@ for(var i = 0; i < mode.length; i++) {
 	mode[i].addEventListener("click", function() {
 		mode[0].classList.remove("selected");
 		mode[1].classList.remove("selected");
+		mode[2].classList.remove("selected");
 		this.classList.add("selected");
-		if(i == 0) {
+		if(this.textContent == "Kids") {
 			numSqaures = 3;
 		}
-		else if(i ==1) {
+		else if(this.textContent == "Men"){
 			numSqaures = 6;
+		}
+		else {
+			numSqaures = 9;
 		}
 		colors = generateRandomColors(numSqaures);
 		pickedColor = pickColor();
